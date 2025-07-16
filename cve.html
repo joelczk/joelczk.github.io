@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="preload" href="css/styles.css" as="style" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
     <style>
       .cve-box {
         border: 1px solid #ccc;
@@ -25,6 +26,20 @@
         text-decoration: underline;
         color: #1e87f0;
       }
+
+      .advisory-link {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+
+      .advisory-link a {
+        color: #1e87f0;
+        text-decoration: none;
+      }
+
+      .advisory-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
 
@@ -43,6 +58,13 @@
               <a href="https://github.com/joelczk/CVE-2025-48461" target="_blank">CVE-2025-48461</a>
             </h2>
             <p>Predictable session cookies that can be bruteforced to gain unauthorized access to Advantech WISE portal</p>
+
+            <div class="advisory-link">
+              <strong>Advisory:</strong>
+              <a href="https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2025-061" target="_blank">
+                https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2025-061
+              </a>
+            </div>
           </div>
         </article>
       </section>
