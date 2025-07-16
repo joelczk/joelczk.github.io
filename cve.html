@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="preload" href="css/styles.css" as="style" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <style>
+      .cve-box {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .cve-box h2 a {
+        text-decoration: none;
+        color: #2c3e50;
+      }
+
+      .cve-box h2 a:hover {
+        text-decoration: underline;
+        color: #1e87f0;
+      }
+    </style>
   </head>
 
   <body>
@@ -15,16 +35,18 @@
           <a href="index.html">< Go back</a>
         </div>
       </section>
-            
+
       <section class="body">
         <article>
-          <h2>
-            <!-- prettier-ignore -->
-            <a href="https://github.com/joelczk/CVE-2025-48461" target="_blank">CVE-2025-48461</a>
-          </h2>
-          <p>Predictable session cookies that can be bruteforced to gain unauthorized access to Advantech WISE portal</p>
+          <div class="cve-box">
+            <h2>
+              <a href="https://github.com/joelczk/CVE-2025-48461" target="_blank">CVE-2025-48461</a>
+            </h2>
+            <p>Predictable session cookies that can be bruteforced to gain unauthorized access to Advantech WISE portal</p>
+          </div>
         </article>
       </section>
+
       <section class="footer">
         <nav>
           <a href="https://joelczk.netlify.app/" target="_blank"> Blog </a>
