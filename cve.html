@@ -1,101 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Joel Chang</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="UTF-8" />
+    <title>CVEs — Joel Chang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // Apply saved theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light")
+            document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="description" content="Security vulnerabilities discovered and disclosed by Joel Chang." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preload" href="css/styles.css" as="style" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-
-    <style>
-      .cve-box {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 16px;
-        margin: 20px 0;
-        background-color: #f9f9f9;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      .cve-box h2 a {
-        text-decoration: none;
-        color: #2c3e50;
-      }
-
-      .cve-box h2 a:hover {
-        text-decoration: underline;
-        color: #1e87f0;
-      }
-
-      .advisory-link {
-        margin-top: 12px;
-        font-size: 14px;
-      }
-
-      .advisory-link a {
-        color: #1e87f0;
-        text-decoration: none;
-      }
-
-      .advisory-link a:hover {
-        text-decoration: underline;
-      }
-    </style>
   </head>
 
   <body>
-    <div class="project container">
-      <section class="header">
-        <div class="go-home">
-          <a href="index.html">< Go back</a>
-        </div>
-      </section>
+    <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle light / dark">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+    <div class="container">
+      <header class="header">
+        <div class="go-home"><a href="index.html">&larr; Back</a></div>
+        <div class="tagline">disclosed vulnerabilities</div>
+      </header>
 
-      <section class="body">
-        <article>
-          <div class="cve-box">
+      <main class="content">
+        <h1 class="page-title">CVEs</h1>
+
+        <article class="cve-box">
+          <div class="cve-head">
             <h2>
-              <a href="https://github.com/joelczk/CVE-2025-48461" target="_blank">CVE-2025-48461</a>
+              <a href="https://github.com/joelczk/CVE-2025-48461" target="_blank" rel="noopener">CVE-2025-48461</a>
             </h2>
-            <p>Predictable session cookies that can be bruteforced to gain unauthorized access to Advantech WISE portal</p>
-
-            <div class="advisory-link">
-              <strong>Advisory:</strong>
-              <a href="https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2025-061" target="_blank">
-                https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2025-061
-              </a>
-            </div>
+            <span class="badge medium" title="CVSS 3.1 base score">Medium · 5.0</span>
+          </div>
+          <p>
+            Predictable session cookies that can be bruteforced to gain unauthorized access to the
+            Advantech WISE portal.
+          </p>
+          <div class="advisory-link">
+            <strong>Advisory:</strong>
+            <a href="https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2025-061" target="_blank" rel="noopener">
+              csa.gov.sg/alerts-and-advisories/alerts/al-2025-061
+            </a>
           </div>
         </article>
-      </section>
 
-      <section class="body">
-        <article>
-          <div class="cve-box">
+        <article class="cve-box">
+          <div class="cve-head">
             <h2>
-              <a href="https://github.com/joelczk/CVE-2025-52688" target="_blank">CVE-2025-52688</a>
+              <a href="https://github.com/joelczk/CVE-2025-52688" target="_blank" rel="noopener">CVE-2025-52688</a>
             </h2>
-            <p>Lack of proper sanitization on the access point that could allow an attacker to inject commands with root privileges</p>
-
-            <div class="advisory-link">
-              <strong>Advisory:</strong>
-              <a href="https://www.al-enterprise.com/-/media/567414972b57459697030898f92ac043.pdf" target="_blank">
-                https://www.al-enterprise.com/-/media/567414972b57459697030898f92ac043.pdf
-              </a>
-            </div>
+            <span class="badge critical" title="CVSS 3.1 base score">Critical · 9.8</span>
+          </div>
+          <p>
+            Lack of proper sanitization on the access point that could allow an attacker to inject
+            commands with root privileges.
+          </p>
+          <div class="advisory-link">
+            <strong>Advisory:</strong>
+            <a href="https://www.al-enterprise.com/-/media/567414972b57459697030898f92ac043.pdf" target="_blank" rel="noopener">
+              al-enterprise.com advisory (PDF)
+            </a>
           </div>
         </article>
-      </section>
+      </main>
 
-      <section class="footer">
+      <footer class="footer">
         <nav>
-          <a href="https://joelczk.netlify.app/" target="_blank"> Blog </a>
-          <a href="" target="_blank"> About Me </a>
-          <a href="./cve.html"> CVEs </a>
-          <a href="https://github.com/joelczk/" target="_blank"> Code </a>
-          <a href="./experience.html"> Experience </a>
+          <a href="https://joelczk.netlify.app/" target="_blank" rel="noopener">Blog</a>
+          <a href="./cve.html" class="active">CVEs</a>
+          <a href="https://github.com/joelczk/" target="_blank" rel="noopener">Code</a>
+          <a href="./experience.html">Experience</a>
         </nav>
-      </section>
+      </footer>
     </div>
+    <script src="js/theme.js"></script>
   </body>
 </html>
